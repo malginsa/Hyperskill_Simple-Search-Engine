@@ -1,6 +1,15 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class SimpleSearchEngine {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String text = scanner.nextLine();
+        String wordToSearch = scanner.nextLine();
+        searchWord(text, wordToSearch);
+    }
 
     protected static void searchWord(String text, String wordToSearch) {
         String result = "Not found";
