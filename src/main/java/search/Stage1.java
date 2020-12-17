@@ -1,8 +1,8 @@
-package org.example;
+package search;
 
 import java.util.Scanner;
 
-public class SimpleSearchEngine {
+public class Stage1 {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);

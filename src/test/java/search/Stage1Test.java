@@ -1,4 +1,4 @@
-package org.example;
+package search;
 
 import org.junit.Test;
 
@@ -7,7 +7,7 @@ import java.io.PrintStream;
 
 import static org.junit.Assert.assertEquals;
 
-public class SimpleSearchEngineTest {
+public class Stage1Test {
 
     private static final PrintStream defaultSystemOut = System.out;
 
@@ -29,7 +29,7 @@ public class SimpleSearchEngineTest {
 
     private void assertPrinted(String text, String word, String result) {
         ByteArrayOutputStream tmpOutputStream = createTmpOutputStream();
-        SimpleSearchEngine.searchWord(text, word);
+        Stage1.searchWord(text, word);
         assertEquals(result, tmpOutputStream.toString().trim());
         System.setOut(defaultSystemOut);
     }
