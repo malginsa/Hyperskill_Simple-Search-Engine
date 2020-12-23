@@ -5,7 +5,9 @@ package search;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 class AnyStrategyTest {
 
@@ -23,13 +25,13 @@ class AnyStrategyTest {
                 "Erick",
                 "Dwight",
                 "webb@gmail.com"));
-        List<String> expected = List.of(
+        Set<String> expected = Set.of(
                 "Erick Harrington harrington@gmail.com",
                 "Erick Burgess",
                 "Dwight Joseph djo@gmail.com",
                 "Rene Webb webb@gmail.com");
         strategy.buildIndecies();
-        List<String> actual = strategy.execute();
+        Set<String> actual = new HashSet<String>(strategy.execute());
         Assert.assertEquals(expected, actual);
     }
 

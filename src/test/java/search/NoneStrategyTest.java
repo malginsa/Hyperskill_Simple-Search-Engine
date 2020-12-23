@@ -2,7 +2,9 @@ package search;
 
 import org.junit.jupiter.api.Test;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -21,12 +23,12 @@ class NoneStrategyTest {
         strategy.setQueries(List.of(
                 "djo@gmail.com",
                 "ERICK"));
-        List<String> expected = List.of(
+        Set<String> expected = Set.of(
                 "Katie Jacobs",
                 "Myrtle Medina",
                 "Rene Webb webb@gmail.com");
         strategy.buildIndecies();
-        List<String> actual = strategy.execute();
+        Set<String> actual = new HashSet<String>(strategy.execute());
         assertEquals(expected, actual);
     }
 }
