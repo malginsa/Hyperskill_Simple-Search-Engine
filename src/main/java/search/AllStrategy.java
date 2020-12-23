@@ -1,6 +1,5 @@
-package search.stage6;
+package search;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
@@ -16,7 +15,7 @@ public class AllStrategy extends Strategy {
 
         return intersectionOfLists(multilistOfIndices)
                 .stream()
-                .map(index -> getAllPeople().get(index))
+                .map(index -> getAllPersons().get(index))
                 .collect(Collectors.toList());
     }
 

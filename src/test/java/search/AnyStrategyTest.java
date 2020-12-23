@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 //import org.junit.Assert;
 
@@ -12,7 +12,7 @@ class AnyStrategyTest {
     @Test
     void shouldFindFourPerson() {
         Strategy strategy = new AnyStrategy();
-        strategy.setAllPeople(List.of(
+        strategy.setAllPersons(List.of(
                 "Dwight Joseph djo@gmail.com",
                 "Rene Webb webb@gmail.com",
                 "Katie Jacobs",
@@ -36,7 +36,7 @@ class AnyStrategyTest {
     @Test
     void shouldFindThreePerson() {
         Strategy strategy = new AnyStrategy();
-        strategy.setAllPeople(List.of(
+        strategy.setAllPersons(List.of(
                 "Dwight Joseph djo@gmail.com",
                 "Rene Webb webb@gmail.com",
                 "Katie Jacobs",

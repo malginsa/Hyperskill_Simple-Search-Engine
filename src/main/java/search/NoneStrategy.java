@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,10 +13,10 @@ public class NoneStrategy extends Strategy {
                 .sorted()
                 .distinct()
                 .collect(Collectors.toList());
-        List<Integer> allIndices = IntStream.range(0, getAllPeople().size()).boxed().collect(Collectors.toList());
+        List<Integer> allIndices = IntStream.range(0, getAllPersons().size()).boxed().collect(Collectors.toList());
         allIndices.removeAll(unitedIndices);
         return allIndices.stream()
-                .map(index -> getAllPeople().get(index))
+                .map(index -> getAllPersons().get(index))
                 .collect(Collectors.toList());
     }
 }

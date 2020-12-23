@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -16,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws FileNotFoundException {
 
         Main main = new Main();
-        List<String> allPeople = inputPersonsFromFile(getInputFileName(args));
+        List<String> allPersons = inputPersonsFromFile(getInputFileName(args));
 
         int menuItem = main.getMenuItem();
         while (menuItem != 0) {
@@ -24,10 +24,10 @@ public class Main {
                 case 1:
                     Context context = main.inputStrategy();
                     List<String> queries = main.inputContext();
-                    print(context.invoke(allPeople, queries), "");
+                    print(context.invoke(allPersons, queries), "");
                     break;
                 case 2:
-                    print(allPeople, "\n=== List of people ===\n");
+                    print(allPersons, "\n=== List of persons ===\n");
                     break;
                 case 0:
                     break;
@@ -37,9 +37,9 @@ public class Main {
         System.out.println("\nBye!");
     }
 
-    private static void print(List<String> people, String header) {
+    private static void print(List<String> text, String header) {
         System.out.println(header);
-        people.forEach(System.out::println);
+        text.forEach(System.out::println);
     }
 
     private List<String> inputContext() {

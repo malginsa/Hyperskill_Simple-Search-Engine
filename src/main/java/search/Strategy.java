@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,7 +10,7 @@ import static java.util.Collections.emptyList;
 
 public abstract class Strategy {
 
-     private List<String> allPeople;
+     private List<String> allPersons;
      private List<String> queries;
      private Map<String, List<Integer>> indices;
 
@@ -18,8 +18,8 @@ public abstract class Strategy {
 
      public void buildIndecies() {
           Map<String, List<Integer>> indecies = new HashMap<>();
-          for (int lineNumber = 0; lineNumber < getAllPeople().size(); lineNumber++) {
-               for (String word : getAllPeople().get(lineNumber).toLowerCase().split(" ")) {
+          for (int lineNumber = 0; lineNumber < getAllPersons().size(); lineNumber++) {
+               for (String word : getAllPersons().get(lineNumber).toLowerCase().split(" ")) {
                     updateMap(indecies, word, lineNumber);
                }
           }
@@ -41,8 +41,8 @@ public abstract class Strategy {
           value.add(lineNumber);
      }
 
-     protected List<String> getAllPeople() {
-          return allPeople;
+     protected List<String> getAllPersons() {
+          return allPersons;
      }
 
      protected List<String> getQueries() {
@@ -53,8 +53,8 @@ public abstract class Strategy {
           return indices;
      }
 
-     public void setAllPeople(List<String> allPeople) {
-          this.allPeople = allPeople;
+     public void setAllPersons(List<String> allPersons) {
+          this.allPersons = allPersons;
      }
 
      public void setQueries(List<String> queries) {

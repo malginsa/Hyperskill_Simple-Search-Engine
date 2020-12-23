@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import org.junit.jupiter.api.Test;
 
@@ -11,7 +11,7 @@ class NoneStrategyTest {
     @Test
     void shouldFindOnePerson() {
         Strategy strategy = new NoneStrategy();
-        strategy.setAllPeople(List.of(
+        strategy.setAllPersons(List.of(
                 "Dwight Joseph djo@gmail.com",
                 "Rene Webb webb@gmail.com",
                 "Katie Jacobs",

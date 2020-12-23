@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import org.junit.jupiter.api.Test;
 
@@ -6,14 +6,14 @@ import java.util.Collections;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static search.stage6.AllStrategy.intersectionOfLists;
+import static search.AllStrategy.intersectionOfLists;
 
 class AllStrategyTest {
 
     @Test
     void shouldFindOnePerson() {
         Strategy strategy = new AllStrategy();
-        strategy.setAllPeople(List.of(
+        strategy.setAllPersons(List.of(
                 "Dwight Joseph djo@gmail.com",
                 "Rene Webb webb@gmail.com",
                 "Katie Jacobs",

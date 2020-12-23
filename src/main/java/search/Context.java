@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import java.util.List;
 
@@ -28,8 +28,8 @@ public class Context {
         this.strategy = strategy;
     }
 
-    public List<String> invoke(List<String> allPeople, List<String> queries) {
-        strategy.setAllPeople(allPeople);
+    public List<String> invoke(List<String> allPersons, List<String> queries) {
+        strategy.setAllPersons(allPersons);
         strategy.setQueries(queries);
         strategy.buildIndecies();
         return strategy.execute();

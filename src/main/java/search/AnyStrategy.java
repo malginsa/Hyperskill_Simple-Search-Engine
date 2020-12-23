@@ -1,4 +1,4 @@
-package search.stage6;
+package search;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -11,7 +11,7 @@ public class AnyStrategy extends Strategy {
                 .flatMap(List::stream)
                 .sorted()
                 .distinct()
-                .map(index -> getAllPeople().get(index))
+                .map(index -> getAllPersons().get(index))
                 .collect(Collectors.toList());
     }
 }
