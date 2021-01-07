@@ -1,3 +1,3 @@
 # Simple-Search-Engine_Hyperskill
 
-Secure version of code sharing platform
+Studying project from Hyperskill.org
